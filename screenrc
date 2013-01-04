@@ -1,0 +1,24 @@
+#
+#~/.screenrc
+#
+
+#设定编码
+defencoding UTF-8
+
+#设定状态栏(在secureCRT下回造成显示有一定延迟)
+caption always "%{= wk}%{wk}%-Lw%{rw} %n+%f %t %{wk}%+Lw %=%c%{= R}%{-}"
+shelltitle '$ |bash'
+startup_message off
+#关闭闪屏
+vbell off
+autodetach on
+shell bash
+#绑定F11跳转到前一窗口
+bindkey -k F1 prev
+#绑定F12跳转到前一窗口
+bindkey -k F2 next
+
+#禁用组合键'C-a s'(此组合键作用是锁住屏幕组)
+#有时候误按此键,会发现什么都没反应了(可按'C-a q'解锁)
+#之前还以为程序bug...汗
+bind s
